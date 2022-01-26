@@ -12,7 +12,7 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 
 ## What
 
-Thinking through a minesweeper implementation - this was a live coding exercise for an interview for an autonomus driving company - honestly a bit too complex for live coding imo but everyone think's they are goog now... I never really played minesweeper as a kid as I didn't have access to windows until well into my 20s.
+Thinking through a minesweeper implementation - this was a live coding exercise for an 45m screening interview for an autonomus driving company - honestly a bit too complex for live coding imo but everyone think's they are goog now... I never really played minesweeper as a kid as I didn't have access to windows until well into my 20s.
 
 ## The rules
 
