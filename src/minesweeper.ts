@@ -51,7 +51,7 @@ export function generatePoints(
     const x = Math.floor(Math.random() * width);
     const y = Math.floor(Math.random() * height);
     const entry = `${x},${y}`;
-    iterations++;
+    iterations--;
     if (pointsMap.has(entry)) {
       continue;
     }
