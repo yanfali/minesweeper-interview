@@ -22,7 +22,7 @@ export function initBoard(height: number = 7, width: number = 7): Board {
     width,
     board: [],
   };
-  let tot = height * width;
+  const tot = height * width;
   for (let i = 0; i < tot; i++) {
     board.board.push({ mine: false, score: 0, visited: false });
   }
