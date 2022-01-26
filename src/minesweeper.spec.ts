@@ -1,4 +1,4 @@
-import { initBoard, generatePoints, pointToString } from "./minesweeper";
+import { initBoard, generatePoints, pointToString, calculateLinearPosition } from "./minesweeper";
 describe("test board init", () => {
   it("should initialize the board", () => {
     const board = initBoard();
@@ -25,7 +25,18 @@ describe("test point generator", () => {
     expect(points).toHaveLength(2);
     const a = pointToString(points[0]);
     const b = pointToString(points[1]);
-    console.log(a,b);
+    console.log(a, b);
     expect(a).not.toBe(b);
+  });
+});
+
+describe("test linear address convertion", () => {
+  it("4,3 should not match 3,4", () => {
+    const board = {height: 5, width: 5, board: []};
+    const a = { x: 4, y: 3 };
+    const b = { x: 3, y: 4 };
+    const linearA = calculateLinearPosition(board, a);
+    const linearB = calculateLinearPosition(board, b);
+    expect(linearA).not.toBe(linearB);
   });
 });

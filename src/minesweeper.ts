@@ -66,3 +66,15 @@ export function generatePoints(
 
   return points;
 }
+
+// convert cartesian points back to linear array address
+export function calculateLinearPosition(board: Board, point: Point): number {
+    return point.y * board.width + point.x;
+}
+
+export function initMines(board: Board, points: Point[]): Board {
+    points.forEach(point => {
+        board.board[calculateLinearPosition(board, point)].mine = true;
+    })
+    return board;
+}
